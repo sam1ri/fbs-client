@@ -1,0 +1,23 @@
+
+.__logo_wrapper{
+    display: flex;
+    .__logo_image_wrapper{
+        display: flex;
+    
+        .__logo_image{
+            width: 120px;
+            display: inline;
+            opacity: .74;
+        }
+    }
+    
+    .__logo_title_wrapper{
+        padding: 20px 0 0 20px;
+    }
+}
+.__nav_item{
+    padding: 20px;
+    font-size: 20px;
+    border-right: 1px solid #a1a1a1;
+}    
+
