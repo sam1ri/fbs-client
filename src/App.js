@@ -1,6 +1,6 @@
 import './App.scss';
 import {useState, useEffect} from 'react'
-import { Route, Routes, Redirect } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 // componentws
@@ -19,14 +19,17 @@ const App = () => {
     <div className="__wrapper">
       <h1>Samir</h1>
       <Navbar/>
-        <Routes>
-          <Route path="/home" element={<Home/>}></Route>
-          <Route path="/flight-search" element={<FlightList/>}></Route>
-          <Route></Route>
-          <Route></Route>
-          <Route></Route>
-          <Route></Route>
-        </Routes>
+        <div style={{marginTop: '100px'}}>
+          <Routes>
+            <Route path="/" element={<Navigate to={'/home'} />}></Route>
+            <Route path="/home" element={<Home/>}></Route>
+            <Route path="/search-flights" element={<FlightList/>}></Route>
+            <Route></Route>
+            <Route></Route>
+            <Route></Route>
+            <Route></Route>
+          </Routes>
+        </div>
     </div>
   );
 }

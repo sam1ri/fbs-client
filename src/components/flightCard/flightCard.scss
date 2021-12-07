@@ -2,10 +2,20 @@
     height: 100px;
     padding: 5px;
 
+    
+
     .__card_item{
         padding: 10px;
-        background-color: #f1f1f1;
+        // background-color: #f1f1f1;
+        margin-top: 20px;
         height: 100%;
+        box-shadow: 0px 0px 3px 1px #e2e2e2;
+
+
+        .__card_column{
+            padding: 10px;
+            height: 100%;
+        }
     }
 
 

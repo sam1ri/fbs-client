@@ -7,5 +7,14 @@
         color: #ee5057;
         background-color: #fff;
     }
+
+    .__btn_search:active{
+        background-color: #ee5057 !important;
+        border-color: #ee5057 !important;
+        border: none;
+    }
+    .__btn_search:focus {
+        box-shadow: none;
+      }
 }
 

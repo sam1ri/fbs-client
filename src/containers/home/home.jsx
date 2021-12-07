@@ -5,20 +5,23 @@ import SearchFlightsBar from '../../components/searchFlightsBar/searchFlightsBar
 
 const App = () => {
 
+    
+
   return (
     <div className="tm-main-content" id="top">
         <div className="__fly_quote">
             <div className="__fly_abs">
-                <h1>Fluturoni sot, me lehte se kurrë!</h1>
+                <h1>Today, easier than ever!</h1>
+                <h4>Fly with the best flight class in the balkans!</h4>
 
             </div>
         </div>
       <div className="__searchFlighFilter tm-section tm-bg-img" >
 
-        <SearchFlightsBar/>
+        <SearchFlightsBar />
       </div>
       
-      <div className="tm-section-2">
+      <div className="tm-section-2 mt-5">
           <div className="container">
               <div className="row">
                   <div className="col text-center">
