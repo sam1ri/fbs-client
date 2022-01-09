@@ -43,21 +43,28 @@ const FlightList = () => {
                 <div className="__flight_list">
                     <div className="__card_header">
                         <div className="row">
-                            <div className="col-md-4 p-0">
+                            <div className="col-md-3 p-0">
+                                <div className="__header_column">
+                                    <div className="__header_column_title">
+                                        Airplane
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-3 p-0">
                                 <div className="__header_column">
                                     <div className="__header_column_title">
                                         Departure Date and Time
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4 p-0">
+                            <div className="col-md-3 p-0">
                                 <div className="__header_column">
                                     <div className="__header_column_title">
-                                        Date
+                                        Flight Duration
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4 p-0">
+                            <div className="col-md-3 p-0">
                                 <div className="__header_column">
                                     <div className="__header_column_title">
                                         Price
@@ -69,7 +76,7 @@ const FlightList = () => {
                     {
                         flights?.map((flight, index) => {
                             return (
-                                <FlightCard key={index} data={{timeFrom: flight.DataNisjes, timeTo: flight.DataMberritjes, price: flight.CmimiFluturimit}}/>
+                                <FlightCard key={index} data={{flight: flight, flightName: flight.Emertimi,timeFrom: flight.DataNisjes, timeTo: flight.DataMberritjes, price: flight.CmimiFluturimit}}/>
                             )
                         })
                     } 

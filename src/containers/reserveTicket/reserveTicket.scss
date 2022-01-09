@@ -1,0 +1,91 @@
+$titleColor: #646464;
+
+.__modal{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1001;
+
+    .__modal_shadow{
+        opacity: .3;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        background-color: #000;
+    }    
+    .__modal_content{
+        z-index: 1002;
+        background-color: #fff;
+        left: 5%;
+        top: 5%;
+        height: 90%;
+        position: absolute;
+        width: 90%;
+
+        .__reserve_ticket_wrapper{        
+            .__content_header{
+                background-color: #fafafa;
+                padding: 25px;
+                position: relative;
+                box-shadow: 0px 10px 10px -12px #d5d5d5;
+                .__modal_header_title{
+                    font-weight: 100;
+                    color: $titleColor;
+                }
+                @media (max-width: 768px) {
+                    .__modal_header_title{
+                        font-size: 25px;
+                    }
+                }
+
+                @media (max-width: 540px) {
+                    .__modal_header_title{
+                        font-size: 20px;
+                    }
+                }
+
+                .__remove_modal{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 30px;
+                    height: 30px;
+                    // background-color: #000;
+                    cursor: pointer;
+                    font-weight: 900;
+                    font-size: 20px;
+                    text-align: center;
+                    color: #7b7b7b;
+                    margin: 5px;
+                }
+            }
+            .__content_body{
+                
+                padding: 15px;
+                .__content_sub_header{
+                    padding: 10px;
+                    display: inline;
+
+                    .__flight_detail_header{
+                        color: $titleColor;
+                        display: inline;
+                    }
+                }
+                .__content_sub_content{
+                    color: #000;
+                    padding: 15px;
+
+                    p{
+                        margin: 0;
+                    }
+
+                    .__content_sub_content_details{
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

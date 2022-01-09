@@ -2,9 +2,12 @@
     height: 100px;
     padding: 5px;
 
-    
+    .__card_item:hover{
+        transform: scale(1.02);
+    }
 
     .__card_item{
+        transition: .1s linear;
         padding: 10px;
         // background-color: #f1f1f1;
         margin-top: 20px;

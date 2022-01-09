@@ -5,8 +5,6 @@ import SearchFlightsBar from '../../components/searchFlightsBar/searchFlightsBar
 
 const App = () => {
 
-    
-
   return (
     <div className="tm-main-content" id="top">
         <div className="__fly_quote">

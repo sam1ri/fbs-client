@@ -10,6 +10,8 @@ import Navbar from './components/navbar/navbar'
 // containers
 import Home from './containers/home/home'
 import FlightList from './containers/flightList/flightList';
+import Authentication from './containers/Authentication/Authentication'
+import ReserveTicket from './containers/reserveTicket/reserveTicket';
 
 const App = () => {
 
@@ -17,15 +19,14 @@ const App = () => {
 
   return (
     <div className="__wrapper">
-      <h1>Samir</h1>
       <Navbar/>
         <div style={{marginTop: '100px'}}>
           <Routes>
             <Route path="/" element={<Navigate to={'/home'} />}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/search-flights" element={<FlightList/>}></Route>
-            <Route></Route>
-            <Route></Route>
+            <Route path="/reserve-ticket" element={<ReserveTicket/>}></Route>
+            <Route path="/authentication" element={<Authentication/>}></Route>
             <Route></Route>
             <Route></Route>
           </Routes>
