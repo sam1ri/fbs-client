@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 // components
 import ReserveTicket from '../../containers/reserveTicket/reserveTicket'
+import axiosInstance from '../../axios'
 
 const FlightCard = (props) => {
 
@@ -10,7 +11,18 @@ const FlightCard = (props) => {
 
     const toggleModal = () => {
         setModalState(modalState == 'active' ? 'passive' : 'active')
-        console.log(props.data?.flight)
+        axiosInstance({
+            method: 'GET',
+            url: '/flights/single',
+            params: {flightId: props.data.flight.FlightId }
+        })
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.log(err);
+            })
+            console.log(props.data.flight)
     }
 
     return(

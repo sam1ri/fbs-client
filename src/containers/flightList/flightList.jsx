@@ -76,7 +76,7 @@ const FlightList = () => {
                     {
                         flights?.map((flight, index) => {
                             return (
-                                <FlightCard key={index} data={{flight: flight, flightName: flight.Emertimi,timeFrom: flight.DataNisjes, timeTo: flight.DataMberritjes, price: flight.CmimiFluturimit}}/>
+                                <FlightCard key={index} data={{flight: flight, flightName: flight.AirplaneName,timeFrom: flight.DataNisjes, timeTo: flight.DataMberritjes, price: flight.CmimiFluturimit}}/>
                             )
                         })
                     } 

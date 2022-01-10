@@ -21,7 +21,7 @@ const ReserveTicket = (props) => {
                         <div className='__remove_modal' onClick={() => { props.toggleModal() }}>
                             &#10005;
                         </div>
-                        <h2 className='__modal_header_title'>Reserve a flight ticket with <strong>{props.data.flight.Emertimi}</strong></h2>
+                        <h2 className='__modal_header_title'>Reserve a flight ticket with <strong>{props.data.flight.AirplaneName}</strong></h2>
                     </div>
                     <div className='__content_body'>
                         <div className='container'>
@@ -35,7 +35,7 @@ const ReserveTicket = (props) => {
                                     <div className="__content_sub_content_details">
                                         <div className='row'>
                                             <div className="col-md-2">
-                                                <span>{props.data.flight.Emertimi}</span>
+                                                <span>{props.data.flight.AirplaneName}</span>
                                             </div>
                                             <div className="col-md-2">
                                                 <span>{new Date(props.data.flight.DataNisjes).toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}</span>

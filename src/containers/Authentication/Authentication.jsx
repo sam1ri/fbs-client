@@ -1,7 +1,10 @@
 import './Authentication.scss'
 import axiosInstance from '../../axios'
 import {useState, useEffect} from 'react'
+import {useNavigate } from 'react-router-dom'
 const Authentication = () => {
+
+    const history = useNavigate();
 
     const [loginCreds, setLoginCreds] = useState({
         email: '',
@@ -20,7 +23,13 @@ const Authentication = () => {
             data: {email: loginCreds.email, password: loginCreds.password}
         })
             .then(res => {
-                localStorage.setItem('access_token', res.data.token)
+                if(res.status == 200){
+                    localStorage.setItem('access_token', res.data.token);
+                    history('/home')
+                }
+                else{
+
+                }
             })
             .catch(err => {
                 console.log(err);
